@@ -1,6 +1,7 @@
 <html>
 <body>
-<h2>Hello World!</h2>
+<h1>Hello World!</h1>
+  <h2>Welcome to Devops World</h2>
 
 <h3>WelCome to Jenkins! We are working on Code Pipeline version 2</h3>
   
