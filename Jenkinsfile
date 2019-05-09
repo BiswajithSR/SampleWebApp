@@ -22,7 +22,7 @@ pipeline {
         stage ('Deploy Build in Staging Area'){
             steps{
 
-                build job : 'Deploy-StagingArea-Piple'
+                build job : 'Deploy_to_StageEnvironment'
 
             }
         }
@@ -33,7 +33,7 @@ pipeline {
                     input message: 'Approve PRODUCTION Deployment?'
                 }
                 
-                build job : 'Deploy-Production-Pipeline'
+                build job : 'Deploy_To_UATEnvironment'
             }
 
             post{
