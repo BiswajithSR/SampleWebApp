@@ -24,6 +24,26 @@ pipeline {
                 build job : 'Deploy-Stage-Pipeline'
             }
         }
+		
+		stage ('Execute Devops regression test suite and verify code quality')
+		{
+			steps
+			{
+				build job : 'DevOpsRegressionTests'
+			}
+			post
+			{
+				success
+				{
+					echo 'Regression test suite executed properly - we can gohead for UAT deployment'
+				}
+				failure
+				{
+					echo 'Regression test suite failed - Abort UAT deployment'
+				}
+			}
+			
+		}
 
         stage ('Deploy Successful build in UAT Environment')
         {
