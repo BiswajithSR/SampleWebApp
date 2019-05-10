@@ -7,7 +7,7 @@
   
 <h4> This is new change from github</h4>
 
-<p> This is to verify from Clod Azure</p>
+<p> This is to verify from Cloud Azure</p>
 
   <p> Pipelined to deploy on UAT Server </p>
   
