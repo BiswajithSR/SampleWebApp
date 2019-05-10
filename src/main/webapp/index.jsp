@@ -1,9 +1,9 @@
 <html>
 <body>
 <h1>Hello World!</h1>
-  <h2>Welcome to Devops World</h2>
+<h2>Welcome to Devops region</h2>
 
-<h3>WelCome to Jenkins! We are working on Code Pipeline version 2</h3>
+<h3>WelCome to Jenkins! pipeline</h3>
   
   <h4> This is new change from github</h4>
 
