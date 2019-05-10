@@ -1,48 +1,45 @@
 pipeline {
     agent any
     stages {
-        stage ('Build Servlet Project') {
-            steps {
-                /*For windows machine */
+        stage ('Build First JSP Project') 
+        {
+            steps 
+            {
                bat  'mvn clean package'
-
-                /*For Mac & Linux machine */
-               // sh  'mvn clean package'
             }
-
-            post{
-                success{
+            post
+            {
+                success
+                {
                     echo 'Now Archiving ....'
-
                     archiveArtifacts artifacts : '**/*.war'
                 }
             }
         }
 
-        stage ('Deploy Build in Staging Area'){
-            steps{
-
-                build job : 'Deploy-StagingArea-Piple'
-
+        stage ('Deploy successful build in Stage Environment')
+        {
+            steps
+            {
+                build job : 'Deploy-Stage-Pipeline'
             }
         }
 
-        stage ('Deploy to Production'){
-            steps{
-                timeout (time: 5, unit:'DAYS'){
-                    input message: 'Approve PRODUCTION Deployment?'
-                }
-                
-                build job : 'Deploy-Production-Pipeline'
+        stage ('Deploy Successful build in UAT Environment')
+        {
+            steps
+            {
+                build job : 'Deploy-UAT-Pipeline' 
             }
-
-            post{
-                success{
-                    echo 'Deployment on PRODUCTION is Successful'
+            post
+            {
+                success
+                {
+                    echo 'Deployment on UAT Environment is Successful'
                 }
-
-                failure{
-                    echo 'Deployement Failure on PRODUCTION'
+                failure
+                {
+                    echo 'Deployement Failure on UAT Environment'
                 }
             }
         }
