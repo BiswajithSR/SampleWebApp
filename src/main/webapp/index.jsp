@@ -5,9 +5,9 @@
 
 <h3>WelCome to Jenkins! pipeline</h3>
   
-  <h4> This is new change from github</h4>
+<h4> This is new change from github</h4>
 
-<p> This is change is to verify the Stage Environment</p>
+<p> This is to verify from Clod Azure</p>
 
   <p> Pipelined to deploy on UAT Server </p>
   
