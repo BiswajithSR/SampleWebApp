@@ -9,7 +9,7 @@
 
 <p> This is to verify from Cloud Azure</p>
 
-  <p> Pipelined to deploy on UAT Server </p>
+  <p> Changes from local github </p>
   
 </body>
 </html>
