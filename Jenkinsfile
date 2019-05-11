@@ -5,7 +5,7 @@ pipeline {
         {
             steps 
             {
-               bat  'mvn clean package'
+               bat  'mvn clean build'
             }
             post
             {
