@@ -9,7 +9,7 @@
 
 <p> This is to verify from Cloud Azure</p>
 
-  <p> Changes from local github </p>
+  <p> Changes from local github demo </p>
   
 </body>
 </html>
