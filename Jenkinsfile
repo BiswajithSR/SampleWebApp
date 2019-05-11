@@ -5,7 +5,23 @@ pipeline {
         {
             steps 
             {
-               bat  'mvn clean compile'
+               bat  'mvn clean compile'			   
+            }
+            post
+            {
+                success
+                {
+                    echo 'compiled sucessfully ....'
+
+                }
+            }
+        }
+		
+		stage ('Build Package')
+		{
+		 steps 
+            {
+               bat  'mvn clean package'			   
             }
             post
             {
@@ -15,7 +31,8 @@ pipeline {
                     archiveArtifacts artifacts : '**/*.war'
                 }
             }
-        }
+		
+		}
 
         stage ('Deploy successful build in Stage Environment')
         {
